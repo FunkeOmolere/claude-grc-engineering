@@ -32,11 +32,18 @@ key_requirements:
       - Non-US storage requires documented encryption posture and counsel sign-off
 
   access_control:
-    description: Only US persons may access ITAR-controlled technical data
+    description: |
+      Only "US persons" as defined in 22 CFR 120.62 may access ITAR-controlled
+      technical data. The 120.62 definition covers citizens, lawful permanent
+      residents, "protected individuals" under 8 USC 1324b(a)(3), and
+      US-incorporated entities. Don't narrow this to "citizens or LPRs only";
+      that over-restricts and can trigger employment-law exposure.
     cloud_controls:
-      - Verify citizenship/permanent residency of all users
+      - Verify US-person status under the full 22 CFR 120.62 definition
+      - Tag users with the 120.62 category that applies (citizen, LPR, protected individual, US entity)
       - Implement role-based access control
       - Audit all access to controlled data
+      - Review the verification method with HR and counsel
 
   encryption:
     description: ITAR data must be encrypted in transit and at rest

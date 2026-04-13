@@ -44,7 +44,7 @@ Evaluates readiness for US export controls compliance across both ITAR (defense 
 **Jurisdiction Determination**:
 - Is the item on the USML (US Munitions List)? → ITAR
 - Is the item on the CCL (Commerce Control List)? → EAR with ECCN
-- Neither list? → Likely EAR99 (low-level controls)
+- Neither list? → Likely EAR99. No license for most destinations / end-users, but destination (15 CFR 746), end-user (Entity List / DPL / SDN), and end-use (15 CFR 744) rules still apply. The "knowledge" standard means a license can be required even for EAR99 if you know or have reason to know the item is destined for a prohibited use or user.
 
 **Compliance Status**:
 - Compliant, Non-Compliant, Partially Compliant

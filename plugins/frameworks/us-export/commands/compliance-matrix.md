@@ -41,9 +41,9 @@ Side-by-side comparison of ITAR and EAR requirements to understand overlaps, dif
 ### 1. Personnel and Access
 
 **ITAR-1: US Person Verification**
-- **Requirement**: Only US citizens or permanent residents
-- **Cloud Impact**: Verify citizenship for all users, tag IAM users
-- **Verification**: Personnel files, citizenship documentation
+- **Requirement**: Access limited to "US persons" per [22 CFR 120.62](https://www.ecfr.gov/current/title-22/chapter-I/subchapter-M/part-120/subpart-C/section-120.62). That covers citizens, lawful permanent residents, "protected individuals" under 8 USC 1324b(a)(3), and US-incorporated entities. Don't collapse it to "citizens or LPRs only."
+- **Cloud Impact**: Verify US-person status per 120.62 category, tag IAM users with the resulting status
+- **Verification**: Personnel files documenting which 120.62 category applies, reviewed with HR and counsel
 
 **EAR-2: End-User Screening**
 - **Requirement**: Screen against BIS denied parties lists
@@ -169,7 +169,7 @@ AWS Tags:
 | Item on USML | ✅ Yes | ❌ No | Use `/us-export:itar-assess` |
 | Item on CCL with ECCN | ❌ No | ✅ Yes | Use `/us-export:ear-assess` |
 | Item on both lists | ✅ Yes | ⚠️ Maybe | ITAR takes precedence |
-| Item on neither list (EAR99) | ❌ No | ✅ Yes (low-level) | Basic EAR controls (embargo only) |
+| Item on neither list (EAR99) | ❌ No | ✅ Yes | No license for most destinations, but destination (15 CFR 746), end-user (Entity List / DPL / SDN), and end-use (15 CFR 744) rules still apply. Screen under the "knowledge" standard. |
 | Uncertain jurisdiction | ❓ Unknown | ❓ Unknown | Submit Commodity Jurisdiction (CJ) request |
 
 ## Overlapping Controls (Implement Once)

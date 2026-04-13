@@ -1,16 +1,16 @@
 # Enterprise Deployment Guide
 
-This guide covers deploying Claude Code with GRC Engineering plugins using enterprise-grade infrastructure through AWS Bedrock or Google Vertex AI. These options ensure your data stays within your cloud environment and meets compliance requirements.
+This guide covers deploying Claude Code with GRC Engineering plugins through AWS Bedrock or Google Vertex AI, which route inference through your own cloud account instead of the Anthropic API. Data handling depends on the cloud provider's documented behavior; verify the specifics against the authoritative provider docs before relying on them for a compliance posture.
 
 ## Why Use Enterprise Deployment?
 
-| Benefit | Description |
-|---------|-------------|
-| **Data Residency** | Data never leaves your cloud environment |
-| **Compliance** | Meet regulatory requirements (FedRAMP, HIPAA, SOC 2) |
-| **No Data Training** | Your data is not used to train models |
-| **Enterprise Support** | Cloud provider SLAs and support |
-| **Audit Trails** | Full logging through CloudTrail/Cloud Audit Logs |
+| Benefit | What's actually documented |
+|---------|---------|
+| **Cloud-account routing** | Inference requests go through your AWS or GCP account rather than Anthropic's API. Data residency and in-region processing guarantees are defined by the cloud provider's docs ([Bedrock data protection](https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html), [Vertex AI locations](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/locations)), not by this toolkit. Some Vertex endpoints don't guarantee in-region ML processing for every operation; check the provider docs for your region and model. |
+| **Compliance authorizations** | FedRAMP, HIPAA, SOC 2, and other authorizations are held by the cloud provider for their Anthropic-model offering. See the AWS Bedrock and GCP FedRAMP pages for current status (authorization scope changes). |
+| **Model training use** | Per Anthropic's [commercial terms](https://www.anthropic.com/legal/commercial-terms), prompts and completions to commercial endpoints are not used to train models. Confirm the same for your cloud provider's terms. |
+| **Enterprise support** | Cloud provider SLAs and support apply. |
+| **Audit trails** | Invocations log to CloudTrail or Cloud Audit Logs per the provider's standard logging. |
 
 ---
 
@@ -203,25 +203,29 @@ Claude is available in these Vertex AI regions:
 
 ## Compliance Considerations
 
+Compliance authorizations for Anthropic models hosted on third-party cloud providers move as the providers add and extend them. Always check the provider's current authorization page before committing to a posture in a customer-facing compliance document.
+
 ### FedRAMP
 
-- **AWS Bedrock**: FedRAMP High authorized in GovCloud regions
-- **Vertex AI**: FedRAMP Moderate authorized
+- **AWS Bedrock**: Anthropic Claude models are offered in AWS GovCloud regions under AWS's FedRAMP High authorization. Verify the specific Bedrock endpoints and model variants you plan to use against the [AWS GovCloud Bedrock availability page](https://aws.amazon.com/bedrock/) and the [AWS FedRAMP marketplace entry](https://marketplace.fedramp.gov/products) before relying on it.
+- **Vertex AI (Claude on Vertex AI)**: Google announced on October 31, 2025 that Claude on Vertex AI operates within a FedRAMP High authorization boundary (formerly Moderate). See the [Google Cloud FedRAMP page for Claude on Vertex AI](https://cloud.google.com/security/compliance/fedramp-claude-on-vertex-ai) for the current scope.
 
 ### HIPAA
 
-Both AWS Bedrock and Vertex AI support HIPAA workloads with appropriate BAAs in place.
+Both AWS Bedrock and Vertex AI support HIPAA workloads with appropriate BAAs in place. The BAA is between you and the cloud provider; Anthropic is not a direct party when you're using Bedrock or Vertex.
 
 ### SOC 2
 
-Both platforms maintain SOC 2 Type II reports. Request from your account team.
+Both platforms maintain SOC 2 Type II reports. Request the current report from your account team; don't rely on a stated date in this document.
 
 ### Data Processing
 
-| Provider | Data Usage |
+| Provider | Data usage (per provider docs) |
 |----------|------------|
-| AWS Bedrock | Not used for model training |
-| Vertex AI | Not used for model training |
+| AWS Bedrock | Per [Bedrock data protection](https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html), prompts and completions are not used to train Anthropic models. |
+| Vertex AI | Per [Vertex AI generative data governance](https://cloud.google.com/vertex-ai/generative-ai/docs/data-governance), customer data is not used to train foundation models. |
+
+Authoritative terms are the cloud provider's and Anthropic's own contracts, not this document.
 | Anthropic API | Not used for model training (with API) |
 
 ---

@@ -30,13 +30,19 @@ Deep expertise in both ITAR (International Traffic in Arms Regulations) and EAR 
 
 #### ITAR-1: US Person Verification
 
-**Requirement**: Only US citizens or lawful permanent residents may access ITAR-controlled technical data
+**Requirement**: Only "US persons" may access ITAR-controlled technical data. [22 CFR 120.62](https://www.ecfr.gov/current/title-22/chapter-I/subchapter-M/part-120/subpart-C/section-120.62) defines that term broader than "citizens or green-card holders." It covers:
+- US citizens (by birth or naturalization)
+- Lawful permanent residents (green-card holders)
+- "Protected individuals" under [8 USC 1324b(a)(3)](https://www.law.cornell.edu/uscode/text/8/1324b) (certain refugees, asylees, and specific visa holders)
+- US-incorporated entities and US governmental agencies (for entity-level access)
+
+Access policies that say "citizens or LPRs only" over-restrict and can create avoidable HR and employment-law exposure. Use the full 120.62 definition; work with HR and counsel on how you verify each category.
 
 **Implementation**:
-- Verify citizenship with I-9 documentation
-- Tag IAM users with citizenship status
+- Verify US-person status using documentation appropriate to the 120.62 category (I-9 covers employment eligibility, not ITAR 120.62 scope by itself)
+- Tag IAM users with US-person status
 - Implement RBAC limiting access to US persons
-- Annual re-verification of personnel
+- Re-verify periodically; document the method for each 120.62 category
 
 **Cloud Verification**:
 ```bash
@@ -188,7 +194,7 @@ provisions of DoD Directive 5230.25.
 | 5E002 | Encryption technology | Varies by specification |
 | 3A001 | Electronic equipment | Varies by destination |
 | 4A003 | Digital computers | Varies by performance |
-| EAR99 | Items not on CCL | Embargo restrictions only |
+| EAR99 | Items not on CCL | No license for most destinations, but licenses can still be required based on destination (15 CFR 746), end-user (Entity List / DPL / SDN), or end-use (15 CFR 744 proliferation and military end-use rules) |
 
 **Self-Classification**:
 - Review CCL (15 CFR 774 Supplement No. 1)
@@ -409,10 +415,12 @@ Step 2: Is the item on the Commerce Control List (CCL)?
 └─ NO → Continue to Step 3
 
 Step 3: Item not on USML or CCL
-└─ Likely EAR99 (low-level EAR controls)
-    ├─ No license required for most destinations
-    ├─ Still subject to embargo restrictions
-    └─ Denied party screening still required
+└─ Likely EAR99
+    ├─ No license required for most destinations to most end-users
+    ├─ License still required for exports to comprehensively embargoed destinations (15 CFR 746)
+    ├─ License still required when end-user is on the Entity List, DPL, or SDN
+    ├─ License still required for prohibited end-uses under 15 CFR 744 (proliferation, military end-use, military-intelligence end-use)
+    └─ The "knowledge" standard applies: if you know or have reason to know the item is destined for a prohibited use or user, a license is required even for EAR99
 ```
 
 **Commodity Jurisdiction (CJ) Request**:

@@ -16,12 +16,13 @@ Deep dive assessment for International Traffic in Arms Regulations (ITAR) compli
 
 ### ITAR-1: US Person Verification
 
-**Requirement**: Only US persons (citizens or permanent residents) may access ITAR-controlled technical data.
+**Requirement**: Only "US persons" as defined in [22 CFR 120.62](https://www.ecfr.gov/current/title-22/chapter-I/subchapter-M/part-120/subpart-C/section-120.62) may access ITAR-controlled technical data. That definition is broader than citizens and green-card holders. It also includes "protected individuals" under 8 USC 1324b(a)(3) (certain refugees, asylees, and specific visa holders) and US-incorporated entities / US governmental agencies for entity-level access. Access policies that narrow to "citizens or LPRs only" over-restrict and can trigger employment-law exposure. Use the full 120.62 definition.
 
 **Assessment Questions**:
-- Are all users with data access US citizens or permanent residents?
-- Is citizenship verification documented for all users?
-- Are foreign nationals explicitly denied access to ITAR systems?
+- Are users with ITAR technical-data access US persons under the full 120.62 definition?
+- Is US-person status documented per the 120.62 category (citizen, LPR, protected individual, US entity)?
+- Is the verification process reviewed with HR and counsel so it doesn't over-narrow?
+- Are non-US-persons explicitly separated from ITAR systems (not granted access by default)?
 
 **Cloud Verification**:
 - IAM users tagged with citizenship status
