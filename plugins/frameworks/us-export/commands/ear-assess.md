@@ -166,8 +166,12 @@ Is the item on the CCL (Commerce Control List)?
 ├─ YES → Determine ECCN (e.g., 5D002 for encryption)
 │   ├─ High-level ECCN → May require BIS license
 │   └─ Check License Exceptions (ENC, TSU, etc.)
-└─ NO → Likely EAR99 (low-level controls)
-    └─ Still subject to embargo restrictions
+└─ NO → Likely EAR99 (no license for most exports)
+    ├─ Destination rules still apply (15 CFR 746 embargoes + sanctions)
+    ├─ End-user rules still apply (Entity List, DPL, SDN screening)
+    └─ End-use rules still apply (15 CFR 744 — "knowledge" standard means
+       a license can be required if you know or have reason to know the
+       item is destined for a prohibited use, user, or destination)
 ```
 
 ## Examples

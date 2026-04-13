@@ -194,7 +194,7 @@ The toolkit runs on any Claude Code model backend. For enterprise data residency
 export CLAUDE_CODE_USE_BEDROCK=1
 export AWS_REGION=us-east-1
 
-# Google Vertex AI (FedRAMP Moderate)
+# Google Vertex AI (FedRAMP High as of October 2025)
 export CLAUDE_CODE_USE_VERTEX=1
 export CLOUD_ML_REGION=us-east5
 export ANTHROPIC_VERTEX_PROJECT_ID=your-project-id

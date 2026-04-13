@@ -19,7 +19,7 @@ Side-by-side comparison of ITAR and EAR requirements to understand overlaps, dif
 | **Authority** | State Department (DDTC) | Commerce Department (BIS) |
 | **Scope** | Defense articles, services, technical data (USML) | Dual-use commercial items (CCL) |
 | **Item List** | US Munitions List (USML) - 21 categories | Commerce Control List (CCL) - 10 categories |
-| **Personnel** | US persons only (citizens, permanent residents) | No personnel restrictions (except deemed exports) |
+| **Personnel** | US persons per 22 CFR 120.62 (citizens, LPRs, "protected individuals" under 8 USC 1324b(a)(3), US entities) | No personnel restrictions (except deemed exports) |
 | **Geography** | US-located data by default; 22 CFR 120.54 carves out properly-encrypted technical data | BIS-driven (15 CFR 734.6). Sanctions rules in 15 CFR 746 cover comprehensive embargoes (CU, IR, KP, SY), Russia/Belarus (746.8), Crimea/DNR/LNR (746.6), and shift; check current BIS country guidance |
 | **Registration** | DDTC registration required ($3,000/year) | No registration (except encryption items) |
 | **Licensing** | License required for most exports | License required for high-level ECCNs, exceptions available |
