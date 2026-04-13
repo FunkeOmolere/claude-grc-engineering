@@ -152,6 +152,42 @@
       "source": "./plugins/frameworks/irap",
       "description": "Australian IRAP (ISM + Essential Eight) for government cloud",
       "version": "0.1.0"
+    },
+    {
+      "name": "aws-inspector",
+      "source": "./plugins/connectors/aws-inspector",
+      "description": "GRC connector for AWS: IAM, S3, CloudTrail, EBS compliance checks → v1 finding contract",
+      "version": "0.1.0"
+    },
+    {
+      "name": "github-inspector",
+      "source": "./plugins/connectors/github-inspector",
+      "description": "GRC connector for GitHub: branch protection, secret scanning, Dependabot, code scanning → v1 finding contract",
+      "version": "0.1.0"
+    },
+    {
+      "name": "gcp-inspector",
+      "source": "./plugins/connectors/gcp-inspector",
+      "description": "GRC connector for Google Cloud: IAM, Cloud Storage, audit logs, KMS rotation, Compute OS Login → v1 finding contract",
+      "version": "0.1.0"
+    },
+    {
+      "name": "okta-inspector",
+      "source": "./plugins/connectors/okta-inspector",
+      "description": "GRC connector for Okta: password/MFA/session policies, inactive users, admin factor enrollment → v1 finding contract",
+      "version": "0.1.0"
+    },
+    {
+      "name": "oscal",
+      "source": "./plugins/oscal",
+      "description": "OSCAL toolkit: validate and convert catalogs, profiles, SSPs, SAPs, SARs, POA&Ms, assessment results, component definitions. Wraps ethanolivertroy/oscal-cli.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "fedramp-ssp",
+      "source": "./plugins/fedramp-ssp",
+      "description": "Convert FedRAMP Rev 5 SSP DOCX templates to validated OSCAL 1.2.0 SSP JSON. Wraps ethanolivertroy/frdocx-to-froscal-ssp.",
+      "version": "0.1.0"
     }
   ]
 }

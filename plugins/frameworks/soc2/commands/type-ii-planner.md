@@ -28,7 +28,7 @@ Generates a detailed timeline and checklist for SOC 2 Type II audit period testi
 /soc2:type-ii-planner 2024-07-01 2024-12-31
 
 # With audit firm and Gantt output
-/soc2:type-ii-planner 2024-01-01 2024-12-31 --audit-firm="Deloitte" --output=gantt
+/soc2:type-ii-planner 2024-01-01 2024-12-31 --audit-firm="Example Audit LLP" --output=gantt
 ```
 
 ## Output

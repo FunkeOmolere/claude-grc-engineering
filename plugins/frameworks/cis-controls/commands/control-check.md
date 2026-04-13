@@ -2,6 +2,8 @@
 description: Verify specific CIS Control implementation from 18 controls
 ---
 
+> _CIS Controls v8 content used under CC BY-SA 4.0 from the Center for Internet Security. This command's CIS-derived content is CC BY-SA 4.0. See [LICENSE-CIS.md](../LICENSE-CIS.md)._
+
 # CIS Control Implementation Check
 
 Provides detailed implementation guidance and verification for specific CIS Controls v8 controls.

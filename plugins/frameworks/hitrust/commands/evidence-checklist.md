@@ -30,9 +30,9 @@ Mapped Frameworks: HIPAA §164.312(a)(2)(i), NIST 800-53 AC-2, ISO 27001 A.9.2.1
 Assessment Type: Validated (third-party)
 Certification Validity: 2 years
 
-## Control Description
+## Control Description (paraphrased)
 
-A formal user registration and de-registration procedure shall be implemented to enable assignment of access rights.
+The organization should operate a formal user onboarding and offboarding process so that access rights are granted, tracked, and revoked consistently. See your licensed HITRUST CSF for the authoritative control text.
 
 ## Implementation Level Requirements
 

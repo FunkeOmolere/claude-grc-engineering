@@ -2,6 +2,8 @@
 description: List applicable CIS Controls v8 safeguards by Implementation Group
 ---
 
+> _CIS Controls v8 content used under CC BY-SA 4.0 from the Center for Internet Security. This command's CIS-derived content is CC BY-SA 4.0. See [LICENSE-CIS.md](../LICENSE-CIS.md)._
+
 # CIS Controls Safeguard List
 
 Provides comprehensive listing of CIS Controls v8 safeguards organized by Implementation Group (IG1, IG2, IG3).

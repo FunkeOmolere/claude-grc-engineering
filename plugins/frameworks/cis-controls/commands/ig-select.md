@@ -2,6 +2,8 @@
 description: Determine appropriate CIS Controls Implementation Group (IG1/IG2/IG3)
 ---
 
+> _CIS Controls v8 content used under CC BY-SA 4.0 from the Center for Internet Security. This command's CIS-derived content is CC BY-SA 4.0. See [LICENSE-CIS.md](../LICENSE-CIS.md)._
+
 # CIS Controls IG Selection
 
 Helps determine the appropriate Implementation Group (IG1, IG2, or IG3) for your organization based on size, resources, risk profile, and adversary sophistication.

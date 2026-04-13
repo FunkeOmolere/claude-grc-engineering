@@ -1,12 +1,14 @@
 ---
 name: hitrust-expert
-description: HITRUST CSF expert for healthcare security. Deep knowledge of HITRUST Common Security Framework including 156 controls, i1/r2/e1 assessments, MyCSF customization, and harmonization of HIPAA, NIST, ISO, PCI-DSS frameworks.
+description: HITRUST CSF expert for healthcare security. Implementation guidance, assessment workflow, and mapping to HIPAA/NIST/ISO/PCI frameworks. References control IDs only — not a replacement for a licensed CSF copy.
 allowed-tools: Read, Glob, Grep, Write
 ---
 
 # HITRUST Expert
 
-Deep expertise in HITRUST Common Security Framework (CSF) for healthcare and business associate organizations.
+Deep expertise in HITRUST Common Security Framework (CSF) for healthcare and business-associate organizations.
+
+> **Important — normative text.** HITRUST CSF is proprietary and subscription-required. This skill provides **implementation guidance**, **assessment workflow**, and **evidence patterns** — phrased in the author's own words. All normative control statements, scoring rubrics, and MyCSF-specific requirement language must be read from your licensed CSF. When a command in this plugin quotes a control description, it is a paraphrased summary; consult the CSF for authoritative text.
 
 ## Expertise Areas
 

@@ -6,7 +6,9 @@ allowed-tools: Read, Glob, Grep, Write
 
 # CIS Controls Expert
 
-Deep expertise in CIS Controls v8, the premier baseline cybersecurity framework developed by the Center for Internet Security.
+Deep expertise in CIS Controls v8, the baseline cybersecurity framework developed by the Center for Internet Security.
+
+> **License notice.** This skill incorporates content derived from **CIS Controls v8**, © Center for Internet Security, Inc., used under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) license. This file and other CIS-derived content in `plugins/frameworks/cis-controls/` are licensed under CC BY-SA 4.0 (the rest of the repository is MIT). See [LICENSE-CIS.md](../../LICENSE-CIS.md).
 
 ## Expertise Areas
 

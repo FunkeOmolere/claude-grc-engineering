@@ -48,7 +48,7 @@ Audit Period: January 1, 2024 - December 31, 2024 (12 months)
 Audit Type: Type II (Period Testing)
 Trust Service Criteria: Security (CC1-CC9)
 Package Date: 2025-01-28
-Auditor: Deloitte & Touche LLP
+Auditor: Example Audit LLP
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PHASE 1: EVIDENCE COLLECTION

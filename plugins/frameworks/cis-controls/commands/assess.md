@@ -2,6 +2,8 @@
 description: CIS Controls v8 compliance assessment by Implementation Group level
 ---
 
+> _CIS Controls v8 content used under CC BY-SA 4.0 from the Center for Internet Security. This command's CIS-derived content is CC BY-SA 4.0. See [LICENSE-CIS.md](../LICENSE-CIS.md)._
+
 # CIS Controls Assessment
 
 Evaluates organizational readiness for CIS Controls v8 baseline security framework.
