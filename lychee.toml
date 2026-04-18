@@ -24,6 +24,10 @@ exclude = [
   "^https://www\\.ecfr\\.gov",
   # canada.ca returns HTTP/2 protocol errors to lychee's client; renders fine in browsers
   "^https://www\\.canada\\.ca",
+  # Upstream external repo was transferred to hackIDLE; both URLs should be updated in a docs pass
+  "^https://github\\.com/ethanolivertroy/frdocx-to-froscal-ssp$",
+  # FedRAMP reorganized /resources/templates; dedicated docs pass needed to update affected links
+  "^https://www\\.fedramp\\.gov/resources/templates",
 ]
 
 exclude_all_private = true
