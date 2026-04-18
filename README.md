@@ -1,6 +1,6 @@
 # claude-grc-engineering
 
-The official open-source GRC toolkit from the [GRC Engineering Club](https://grcengclub.com) — turning checkbox compliance into engineered systems. It ships as a [Claude Code](https://docs.claude.com/claude-code) plugin marketplace: persona plugins for engineers, auditors, internal GRC teams, and TPRM; 20+ framework reference plugins from SOC 2 to FedRAMP to APRA; and thin cloud/SaaS connectors that emit a common Finding contract. Assessors, platform engineers, and GRC teams everywhere end up re-inventing the same pipeline — pull evidence, crosswalk to a framework, generate a gap report, wrestle OSCAL. The Club maintains one toolkit that does the whole pipeline end-to-end without locking anyone into a vendor platform.
+The official open-source GRC toolkit from the [GRC Engineering Club](https://grcengclub.com). Checkbox compliance to engineered systems, shipped as [Claude Code](https://docs.claude.com/claude-code) plugins: persona plugins for engineers, auditors, internal GRC teams, and TPRM; 20+ framework reference plugins from SOC 2 to FedRAMP to APRA; and thin cloud/SaaS connectors that emit a common Finding contract. Assessors, platform engineers, and GRC teams everywhere rebuild the same pipeline on their own. Pull evidence, crosswalk to a framework, generate a gap report, wrestle OSCAL. One open toolkit, maintained by the community, end-to-end.
 
 ```
 /grc-engineer:gap-assessment SOC2,FedRAMP-High --sources=aws,github
@@ -12,15 +12,15 @@ A prioritized, effort-estimated, remediation-linked gap report backed by 1,468 [
 
 ## Design positions
 
-A few opinionated choices worth naming up front, since they're most of what makes this different from a Vanta or Drata clone.
+A few opinionated choices worth naming up front. These are the engineering principles the community is building around. They shape what good contributions look like.
 
 **SCF is the right crosswalk source.** Most GRC tools roll their own control-mapping tables. They're usually incomplete, and nobody maintains them past the quarter they were built in. SCF has 1,468 controls mapped bidirectionally to 249 frameworks, publishes quarterly, and ships as a static JSON API. The toolkit uses it as the backbone. No hand-maintained CSVs.
 
-**Connectors should be thin.** Platform vendors bundle giant agents that do everything. That's a lock-in pattern, not an engineering pattern. Every connector here is a few hundred lines that shells out to tools teams already have (`aws`, `gcloud`, `gh`, direct Okta API). Any connector can be ripped out and replaced without touching the rest of the toolkit.
+**Connectors should be thin.** Thick all-in-one agents are hard to audit, hard to extend, and hard to swap. Every connector here is a few hundred lines that shells out to tools teams already have (`aws`, `gcloud`, `gh`, direct Okta API). Any connector can be ripped out and replaced without touching the rest of the toolkit. That makes it easy for commercial platforms, platform teams, and individual engineers to each ship one.
 
-**Framework plugins don't reproduce standard text.** ISO 27001, PCI DSS, and HITRUST CSF text is copyrighted. Plenty of GRC tools publish that text inside their product and hope nobody notices. This toolkit references control IDs and ships implementation guidance in paraphrased form. Each team's licensed copy of the standard is the source of truth.
+**Framework plugins don't reproduce standard text.** ISO 27001, PCI DSS, and HITRUST CSF text is copyrighted. This toolkit references control IDs and ships implementation guidance in paraphrased form. Each team's licensed copy of the standard is the source of truth. Anyone can ship a framework plugin without legal exposure, which is how this scales to 249.
 
-**Vanta, Drata, OneTrust, and Archer are good at what they do.** They're also expensive, slow to extend, and assume a dedicated compliance team. This toolkit is for teams that want the engineering layer without the platform lock-in, and for 3PAOs and assessors who want to cross-check what a platform is reporting.
+**This is GRC in Claude Code. It's not a replacement for your GRC platform.** This toolkit gives practitioners an open place to learn the engineering layer and ship it in public. Commercial platforms, internal GRC teams, 3PAOs, and individual engineers all land in Claude Code eventually. The Finding contract is designed to normalize output from any source, so anyone can plug their stack in and contribute.
 
 ## 60-second install
 
@@ -224,7 +224,7 @@ These projects are not part of this repo or governed by the Club. They're listed
 
 ## Community
 
-This toolkit is developed openly by the [GRC Engineering Club](https://grcengclub.com). Contributions are welcome from anyone working in GRC: assessors, internal audit, security engineering, CISO teams, TPRM, platform operators, framework experts.
+This toolkit is developed openly by the [GRC Engineering Club](https://grcengclub.com). The goal: build the biggest open-source self-learning repo for GRC engineering, the way Learn the Cloud did for cloud. Contributions are welcome from anyone working in GRC: assessors, internal audit, security engineering, CISO teams, TPRM, platform operators, framework experts, and the commercial GRC platforms whose customers also live in Claude Code.
 
 - **Contributing**: [`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md). The highest-value contributions are new connectors (Tier-2 roadmap above), framework plugin improvements, and real-world implementation guidance. A typical connector is ~200 lines.
 - **Discussions**: [github.com/GRCEngClub/claude-grc-engineering/discussions](https://github.com/GRCEngClub/claude-grc-engineering/discussions) — "how would I add a connector for X?" and similar design questions welcome.
