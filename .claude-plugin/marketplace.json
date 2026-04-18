@@ -35,6 +35,12 @@
       "version": "0.1.0"
     },
     {
+      "name": "grc-reporter",
+      "source": "./plugins/grc-reporter",
+      "description": "Translate findings, risks, and metrics into narratives leadership reads. Reference implementation of the Reporting category from RFC #38.",
+      "version": "0.1.0"
+    },
+    {
       "name": "soc2",
       "source": "./plugins/frameworks/soc2",
       "description": "SOC 2 Trust Service Criteria expertise and Type I/II assessment support",
