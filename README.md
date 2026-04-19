@@ -55,6 +55,8 @@ Full walkthrough: [`docs/QUICKSTART.md`](docs/QUICKSTART.md).
 | Optimize multi-framework implementation (satisfy many with one) | `/grc-engineer:optimize-multi-framework` |
 | Continuous monitoring with Slack, PagerDuty, or email alerts | `/grc-engineer:monitor-continuous` |
 | Write automation coverage snapshots into `grc-data/metrics/` | `/grc-engineer:record-automation-metrics` |
+| Draft a weekly leadership update from findings, risks, and metrics | `/report:exec-summary` |
+| Report week-over-week automation coverage and ROI | `/report:automation-coverage` |
 | Check pipeline health: which connectors are configured, last-run, cache freshness | `/grc-engineer:pipeline-status` |
 | Review a PR for compliance regressions before merge | `/grc-engineer:review-pr` |
 | Build audit workpapers and evidence packages | `/grc-auditor:generate-workpaper`, `/grc-engineer:collect-evidence` |
@@ -79,6 +81,7 @@ Every command's reference page lives in its plugin's `commands/` directory with 
 |---|---|---|
 | **grc-auditor** | `/grc-auditor:` | External or internal auditors: evidence review, workpaper generation, control validation |
 | **grc-internal** | `/grc-internal:` | Internal GRC teams: risk registers, policy lifecycle, cert portfolio tracking |
+| **grc-reporter** | `/report:` | GRC practitioners communicating up: exec summaries, board briefs, program-health, automation ROI |
 | **grc-tprm** | `/grc-tprm:` | Third-party risk: vendor assessments, questionnaire analysis, risk scoring |
 
 ### Framework plugins
@@ -189,6 +192,7 @@ SCF data is fetched from [`hackidle.github.io/scf-api`](https://hackidle.github.
 - [`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md): add a connector, improve a framework plugin
 - [`docs/FRAMEWORK-PLUGIN-GUIDE.md`](docs/FRAMEWORK-PLUGIN-GUIDE.md): depth tiers (Stub / Reference / Full), level-up checklists, anti-patterns
 - [`docs/FRAMEWORK-COVERAGE.md`](docs/FRAMEWORK-COVERAGE.md): auto-generated status of all 249 SCF-mapped frameworks — which have plugins, at what depth
+- [`docs/GRC-DATA.md`](docs/GRC-DATA.md): user-owned `grc-data/` contracts for metrics, risks, exceptions, vendors, and policies
 - [`docs/SCF-ATTRIBUTION.md`](docs/SCF-ATTRIBUTION.md): SCF licensing and usage
 - [`docs/ENTERPRISE-DEPLOYMENT.md`](docs/ENTERPRISE-DEPLOYMENT.md): AWS Bedrock and Google Vertex AI configuration
 - [`schemas/finding.schema.json`](schemas/finding.schema.json): the data contract

@@ -14,7 +14,7 @@ The command always writes these metric IDs:
 - `automation.controls_manual`
 - `automation.controls_total`
 
-Use it in one of two modes:
+Use it in one of three modes:
 
 1. **Derived mode** for `fedramp-low`, `fedramp-moderate`, `fedramp-high`, or
    `fedramp-20x-ksi`, where the toolkit can count automated controls from the

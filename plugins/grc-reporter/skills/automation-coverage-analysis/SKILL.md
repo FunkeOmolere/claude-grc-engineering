@@ -71,7 +71,7 @@ Lead with one of the three anchors. Do not lead with the table. The table is pro
 
 ## When to skip this report
 
-Do not run this analysis in weeks where the pipeline only has one collection run. The delta isn't real. Use `context-bootstrap` to explain why and schedule the next run instead.
+Do not run this analysis in weeks where the pipeline only has one metric snapshot. The delta isn't real. Use `context-bootstrap` to explain why and schedule the next snapshot period instead.
 
 Do not fabricate a week-over-week comparison to fill the slot. A missing report is better than a hollow one.
 

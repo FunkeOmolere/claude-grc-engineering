@@ -43,4 +43,5 @@ Markdown files saved to `./grc-reports/<command>-<period>.md` by default. Pipe t
 
 ## Status
 
-Pre-1.0, RFC-window prototype. Pushback welcome on commands, naming, and voice at the [PR](https://github.com/GRCEngClub/claude-grc-engineering/pulls?q=grc-reporter) or [RFC #38](https://github.com/GRCEngClub/claude-grc-engineering/issues/38).
+Pre-1.0 reference implementation. Feedback on commands, naming, and voice is
+welcome in repo issues or [RFC #38](https://github.com/GRCEngClub/claude-grc-engineering/issues/38).

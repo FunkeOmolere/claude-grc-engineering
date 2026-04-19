@@ -21,7 +21,7 @@ Before any report command generates, verify:
 
 3. **Framework metadata available.** Each framework plugin's `plugin.json` should have a `framework_metadata` block. Without it, coverage math fails silently.
 
-4. **History depth (for week-over-week commands).** `/report:automation-coverage` needs at least 2 runs 7+ days apart per source. Count files in the findings cache by mtime.
+4. **History depth (for week-over-week commands).** `/report:automation-coverage` needs at least 2 metric snapshots in `./grc-data/metrics/` that are 7+ days apart. Verify snapshot dates there rather than inferring movement from the findings cache.
 
 5. **Optional GitOps state.** `./grc-data/risks/*`, `./grc-data/metrics/*`, `./grc-data/incidents/*.md`. The JSON contracts live in `docs/GRC-DATA.md`. Missing is fine; present is better.
 

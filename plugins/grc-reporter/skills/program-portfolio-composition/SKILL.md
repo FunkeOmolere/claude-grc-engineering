@@ -19,6 +19,8 @@ A 15-framework program is usually a 400 SCF control program. That's the denomina
 **1. Coverage table (one row per framework)**
 
 | Framework | Coverage | 30-day delta | Top gap | Owner |
+| --- | --- | --- | --- | --- |
+| SOC 2 | 82% | +3 pp | Access reviews | IAM |
 
 Five columns. Never more. If you need more, split into a second table with a clear break (e.g., "priority frameworks" vs "monitored frameworks").
 
