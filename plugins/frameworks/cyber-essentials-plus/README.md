@@ -19,7 +19,7 @@ Full depth adds framework-native workflow commands tied to the audit ritual. If 
 
 ## Metadata
 
-| | |
+| Property | Value |
 |---|---|
 | SCF framework ID | `uk-ncsc-ce-2021` |
 | Region | EMEA |
