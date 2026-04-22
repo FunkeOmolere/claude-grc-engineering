@@ -65,7 +65,7 @@ Markdown checklist grouped by CE+ control with:
 
 - Patch status report showing all in-scope software and OS versions
 - Evidence that critical and high patches are applied within **14 days** of release
-- Evidence that unsupported or end-of-life software has been removed or formally risk-accepted
+- Evidence that unsupported or end-of-life software has been removed, updated/replaced, or excluded from the certification boundary
 - Patch management process documentation (cadence, tooling, exception handling)
 - *Requires manual upload*: vulnerability scan output, patch deployment records
 
